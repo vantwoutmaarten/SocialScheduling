@@ -1,23 +1,16 @@
-package com.company;
+import java.io.*;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.lang.ProcessBuilder;
-import java.io.File;
+public class MiniZincRunner {
 
-public class Main {
-
-    public static void main(String[] args) throws IOException{
+    public static void looper()  throws IOException {
         File dir = new File("C:\\Users\\Maarten\\Desktop\\IDM\\gametheory_project\\TestSetGenerator\\TestSets\\examples");
         File[] directoryListing = dir.listFiles();
         if (directoryListing != null) {
-            for (File child : directoryListing) {
+            for (int i = 0; i < directoryListing.length; i++) {
                 // Do something with child
+                File file = directoryListing[i];
                 long startTime = System.nanoTime();
-                runner("minizinc.exe", "C:\\Users\\Maarten\\Desktop\\IDM\\gametheory_project\\model.mzn", child);
+                miniZincRunner("minizinc.exe", "C:\\Users\\Maarten\\Desktop\\IDM\\gametheory_project\\model.mzn", file);
                 long endTime = System.nanoTime();
                 long runtime = endTime - startTime;
                 System.out.println("!!! Runtime = " + runtime + "nanoseconds!!!");
@@ -27,7 +20,7 @@ public class Main {
         }
     }
 
-    public static void runner(String commd, String model, File dataset)  throws IOException{
+    public static void miniZincRunner(String commd, String model, File dataset)  throws IOException {
         Process process = new ProcessBuilder(commd, model, dataset+"").start();
         InputStream is = process.getInputStream();
         InputStreamReader isr = new InputStreamReader(is);
@@ -41,4 +34,5 @@ public class Main {
         }
         return;
     }
+
 }
