@@ -10,7 +10,7 @@ public class MiniZincRunner {
                 // Do something with child
                 File file = directoryListing[i];
                 long startTime = System.nanoTime();
-                miniZincRunner("minizinc.exe", "/Users/berendjanlange/GitDrive/TU Delft/Algorithms for Intelligent Decision Making/SocialScheduling/model.mzn", file);
+                miniZincRunner("minizinc", "/Users/berendjanlange/GitDrive/TU Delft/Algorithms for Intelligent Decision Making/SocialScheduling/model.mzn", file);
                 long endTime = System.nanoTime();
                 long runtime = endTime - startTime;
                 System.out.println("!!! Runtime = " + runtime + "nanoseconds!!!");
