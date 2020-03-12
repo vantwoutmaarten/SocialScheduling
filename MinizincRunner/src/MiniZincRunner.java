@@ -3,14 +3,14 @@ import java.io.*;
 public class MiniZincRunner {
 
     public static void looper()  throws IOException {
-        File dir = new File("C:\\Users\\Maarten\\Desktop\\IDM\\gametheory_project\\TestSetGenerator\\TestSets\\examples");
+        File dir = new File("/Users/berendjanlange/GitDrive/TU Delft/Algorithms for Intelligent Decision Making/SocialScheduling/TestSetGenerator/TestSets/examples");
         File[] directoryListing = dir.listFiles();
         if (directoryListing != null) {
             for (int i = 0; i < directoryListing.length; i++) {
                 // Do something with child
                 File file = directoryListing[i];
                 long startTime = System.nanoTime();
-                miniZincRunner("minizinc.exe", "C:\\Users\\Maarten\\Desktop\\IDM\\gametheory_project\\model.mzn", file);
+                miniZincRunner("minizinc.exe", "/Users/berendjanlange/GitDrive/TU Delft/Algorithms for Intelligent Decision Making/SocialScheduling/model.mzn", file);
                 long endTime = System.nanoTime();
                 long runtime = endTime - startTime;
                 System.out.println("!!! Runtime = " + runtime + "nanoseconds!!!");

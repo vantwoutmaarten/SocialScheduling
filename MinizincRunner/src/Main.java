@@ -6,9 +6,9 @@
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        //MiniZincRunner runMZ = new MiniZincRunner();
-        //runMZ.looper();
-        File dir = new File("C:\\Users\\Maarten\\Desktop\\IDM\\gametheory_project\\TestSetGenerator\\TestSets\\examples");
+        MiniZincRunner runMZ = new MiniZincRunner();
+        runMZ.looper();
+        File dir = new File("/Users/berendjanlange/GitDrive/TU Delft/Algorithms for Intelligent Decision Making/SocialScheduling/TestSetGenerator/TestSets/examples");
         File[] directoryListing = dir.listFiles();
         for (int i = 0; i < directoryListing.length; i++) {
             File file = directoryListing[i];
