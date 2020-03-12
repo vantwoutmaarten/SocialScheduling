@@ -2,37 +2,40 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
         int numJobs;
         int numAgents;
+        ArrayList isprefered;
         //Realistic test sets
         for (int i = 1; i <= 35; i++) {
             if (i <= 5) {
-                numJobs = 10;
-                numAgents = 10;
+                numJobs = 5;
+                numAgents = 5;
             }else if(i<= 10){
-                numJobs = 20;
+                numJobs = 5;
                 numAgents = 10;
             }else if(i <= 15){
                 numJobs = 10;
-                numAgents = 20;
+                numAgents = 5;
             }else if(i <= 20){
-                numJobs = 20;
-                numAgents = 20;
-            }else if(i <= 25){
                 numJobs = 10;
-                numAgents = 30;
-            }else if(i <= 30){
-                numJobs = 30;
                 numAgents = 10;
+            }else if(i <= 25){
+                numJobs = 15;
+                numAgents = 10;
+            }else if(i <= 30){
+                numJobs = 10;
+                numAgents = 15;
             }else{
-                numJobs = 30;
-                numAgents = 30;
+                numJobs = 15;
+                numAgents = 15;
             }
-            try (FileWriter fileWriter = new FileWriter("TestSets/RealisticSets/"+ i+ "_realistic" + numJobs + "J" + numAgents + "A_.dzn" )) {
+            String doubledigit_i = (i < 10 ? "0" : "") + i;
+            try (FileWriter fileWriter = new FileWriter("TestSets/RealisticSets/"+ doubledigit_i+ "_realistic" + numJobs + "J" + numAgents + "A.dzn" )) {
 
                 fileWriter.write("numJobs = "+ numJobs + ";\nnumAgents = "+ numAgents +";\nprocessingTimes = [");
                 //processingtimes
@@ -50,8 +53,13 @@ public class Main {
                 int jobNum;
                 fileWriter.write("|");
                 for (int z = 0; z < numAgents; z++){
-                    for(int j = 0; j < numJobs; j++){
-                        jobNum = (int)(Math.random() * (numJobs)+1);
+                    isprefered = new ArrayList();
+                    for(int j = 0; j < numJobs; j++) {
+                        jobNum = (int) (Math.random() * (numJobs) + 1);
+                        while (isprefered.contains(jobNum)) {
+                            jobNum = (int) (Math.random() * (numJobs) + 1);
+                        }
+                        isprefered.add(jobNum);
                         if(j != numJobs-1) {
                             fileWriter.write(jobNum + ", ");
                         }else{
@@ -72,35 +80,36 @@ public class Main {
        //High Similarity Sets
         for (int i = 1; i <= 35; i++) {
             if (i <= 5) {
-                numJobs = 10;
-                numAgents = 10;
+                numJobs = 5;
+                numAgents = 5;
             }else if(i<= 10){
-                numJobs = 20;
+                numJobs = 5;
                 numAgents = 10;
             }else if(i <= 15){
                 numJobs = 10;
-                numAgents = 20;
+                numAgents = 5;
             }else if(i <= 20){
-                numJobs = 20;
-                numAgents = 20;
-            }else if(i <= 25){
                 numJobs = 10;
-                numAgents = 30;
-            }else if(i <= 30){
-                numJobs = 30;
                 numAgents = 10;
+            }else if(i <= 25){
+                numJobs = 15;
+                numAgents = 10;
+            }else if(i <= 30){
+                numJobs = 10;
+                numAgents = 15;
             }else{
-                numJobs = 30;
-                numAgents = 30;
+                numJobs = 15;
+                numAgents = 15;
             }
-            try (FileWriter fileWriter = new FileWriter("TestSets/HighSimilarityPref_Sets/"+ i+ "_highsim" + numJobs + "J" + numAgents + "A_.dzn" )) {
+            String doubledigit_i = (i < 10 ? "0" : "") + i;
+            try (FileWriter fileWriter = new FileWriter("TestSets/HighSimilarityPref_Sets/"+ doubledigit_i + "_highsim" + numJobs + "J" + numAgents + "A.dzn" )) {
 
                 fileWriter.write("numJobs = "+ numJobs + ";\nnumAgents = "+ numAgents +";\nprocessingTimes = [");
                 //processingtimes
                 int procTime;
                 for(int j = 0; j < numJobs; j++){
                     //(Math.random() * ((max - min) + 1)) + min
-                    procTime = (int)((Math.random() * ((55 - 45))) + 45);
+                    procTime = (int)((Math.random() * ((53 - 47))) + 47);
                     if(j != numJobs-1) {
                         fileWriter.write(procTime + ", ");
                     }else{
@@ -111,8 +120,14 @@ public class Main {
                 int jobNum;
                 fileWriter.write("|");
                 for (int z = 0; z < numAgents; z++){
-                    for(int j = 0; j < numJobs; j++){
-                        jobNum = (int)(Math.random() * (numJobs)+1);
+                    isprefered = new ArrayList();
+                    for(int j = 0; j < numJobs; j++) {
+                        jobNum = (int) (Math.random() * (numJobs) + 1);
+                        while (isprefered.contains(jobNum)) {
+                            jobNum = (int) (Math.random() * (numJobs) + 1);
+                        }
+                        isprefered.add(jobNum);
+
                         if(j != numJobs-1) {
                             fileWriter.write(jobNum + ", ");
                         }else{
@@ -134,35 +149,36 @@ public class Main {
         //Low Similarity Sets
         for (int i = 1; i <= 35; i++) {
             if (i <= 5) {
-                numJobs = 10;
-                numAgents = 10;
+                numJobs = 5;
+                numAgents = 5;
             }else if(i<= 10){
-                numJobs = 20;
+                numJobs = 5;
                 numAgents = 10;
             }else if(i <= 15){
                 numJobs = 10;
-                numAgents = 20;
+                numAgents = 5;
             }else if(i <= 20){
-                numJobs = 20;
-                numAgents = 20;
-            }else if(i <= 25){
                 numJobs = 10;
-                numAgents = 30;
-            }else if(i <= 30){
-                numJobs = 30;
                 numAgents = 10;
+            }else if(i <= 25){
+                numJobs = 15;
+                numAgents = 10;
+            }else if(i <= 30){
+                numJobs = 10;
+                numAgents = 15;
             }else{
-                numJobs = 30;
-                numAgents = 30;
+                numJobs = 15;
+                numAgents = 15;
             }
-            try (FileWriter fileWriter = new FileWriter("TestSets/LowSimilarityPref_Sets/"+ i+ "_lowsim" + numJobs + "J" + numAgents + "A_.dzn" )) {
+            String doubledigit_i = (i < 10 ? "0" : "") + i;
+            try (FileWriter fileWriter = new FileWriter("TestSets/LowSimilarityPref_Sets/"+ doubledigit_i + "_lowsim" + numJobs + "J" + numAgents + "A.dzn" )) {
 
                 fileWriter.write("numJobs = "+ numJobs + ";\nnumAgents = "+ numAgents +";\nprocessingTimes = [");
                 //processingtimes
                 int procTime;
                 for(int j = 0; j < numJobs; j++){
                     //(Math.random() * ((max - min) + 1)) + min
-                    procTime = (int)((Math.random() * ((75 - 15))) + 15);
+                    procTime = (int)((Math.random() * ((80 - 10))) + 10);
                     if(j != numJobs-1) {
                         fileWriter.write(procTime + ", ");
                     }else{
@@ -173,8 +189,13 @@ public class Main {
                 int jobNum;
                 fileWriter.write("|");
                 for (int z = 0; z < numAgents; z++){
-                    for(int j = 0; j < numJobs; j++){
-                        jobNum = (int)(Math.random() * (numJobs)+1);
+                    isprefered = new ArrayList();
+                    for(int j = 0; j < numJobs; j++) {
+                        jobNum = (int) (Math.random() * (numJobs) + 1);
+                        while (isprefered.contains(jobNum)) {
+                            jobNum = (int) (Math.random() * (numJobs) + 1);
+                        }
+                        isprefered.add(jobNum);
                         if(j != numJobs-1) {
                             fileWriter.write(jobNum + ", ");
                         }else{
