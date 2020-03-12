@@ -4,113 +4,9 @@
     <list default="true" id="e7430942-6aaa-46a7-8c1c-3b332e6c68c0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../MinizincRunner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinizincRunner/out/production/MinizincRunner/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/out/production/MinizincRunner/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinizincRunner/out/production/MinizincRunner/MiniZincRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/out/production/MinizincRunner/MiniZincRunner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinizincRunner/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/01_highsim5J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/01_highsim5J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/02_highsim5J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/02_highsim5J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/03_highsim5J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/03_highsim5J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/04_highsim5J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/04_highsim5J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/05_highsim5J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/05_highsim5J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/06_highsim5J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/06_highsim5J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/07_highsim5J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/07_highsim5J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/08_highsim5J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/08_highsim5J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/09_highsim5J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/09_highsim5J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/10_highsim5J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/10_highsim5J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/11_highsim10J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/11_highsim10J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/12_highsim10J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/12_highsim10J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/13_highsim10J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/13_highsim10J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/14_highsim10J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/14_highsim10J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/15_highsim10J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/15_highsim10J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/16_highsim10J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/16_highsim10J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/17_highsim10J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/17_highsim10J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/18_highsim10J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/18_highsim10J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/19_highsim10J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/19_highsim10J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/20_highsim10J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/20_highsim10J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/21_highsim15J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/21_highsim15J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/22_highsim15J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/22_highsim15J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/23_highsim15J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/23_highsim15J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/24_highsim15J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/24_highsim15J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/25_highsim15J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/25_highsim15J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/26_highsim10J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/26_highsim10J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/27_highsim10J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/27_highsim10J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/28_highsim10J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/28_highsim10J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/29_highsim10J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/29_highsim10J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/30_highsim10J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/30_highsim10J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/31_highsim15J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/31_highsim15J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/32_highsim15J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/32_highsim15J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/33_highsim15J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/33_highsim15J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/34_highsim15J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/34_highsim15J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/35_highsim15J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/HighSimilarityPref_Sets/35_highsim15J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/01_lowsim5J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/01_lowsim5J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/02_lowsim5J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/02_lowsim5J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/03_lowsim5J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/03_lowsim5J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/04_lowsim5J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/04_lowsim5J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/05_lowsim5J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/05_lowsim5J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/06_lowsim5J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/06_lowsim5J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/07_lowsim5J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/07_lowsim5J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/08_lowsim5J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/08_lowsim5J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/09_lowsim5J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/09_lowsim5J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/10_lowsim5J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/10_lowsim5J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/11_lowsim10J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/11_lowsim10J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/12_lowsim10J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/12_lowsim10J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/13_lowsim10J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/13_lowsim10J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/14_lowsim10J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/14_lowsim10J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/15_lowsim10J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/15_lowsim10J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/16_lowsim10J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/16_lowsim10J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/17_lowsim10J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/17_lowsim10J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/18_lowsim10J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/18_lowsim10J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/19_lowsim10J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/19_lowsim10J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/20_lowsim10J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/20_lowsim10J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/21_lowsim15J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/21_lowsim15J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/22_lowsim15J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/22_lowsim15J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/23_lowsim15J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/23_lowsim15J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/24_lowsim15J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/24_lowsim15J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/25_lowsim15J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/25_lowsim15J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/26_lowsim10J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/26_lowsim10J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/27_lowsim10J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/27_lowsim10J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/28_lowsim10J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/28_lowsim10J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/29_lowsim10J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/29_lowsim10J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/30_lowsim10J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/30_lowsim10J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/31_lowsim15J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/31_lowsim15J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/32_lowsim15J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/32_lowsim15J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/33_lowsim15J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/33_lowsim15J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/34_lowsim15J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/34_lowsim15J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/35_lowsim15J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/LowSimilarityPref_Sets/35_lowsim15J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/01_realistic5J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/01_realistic5J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/02_realistic5J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/02_realistic5J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/03_realistic5J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/03_realistic5J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/04_realistic5J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/04_realistic5J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/05_realistic5J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/05_realistic5J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/06_realistic5J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/06_realistic5J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/07_realistic5J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/07_realistic5J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/08_realistic5J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/08_realistic5J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/09_realistic5J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/09_realistic5J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/10_realistic5J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/10_realistic5J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/11_realistic10J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/11_realistic10J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/12_realistic10J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/12_realistic10J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/13_realistic10J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/13_realistic10J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/14_realistic10J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/14_realistic10J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/15_realistic10J5A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/15_realistic10J5A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/16_realistic10J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/16_realistic10J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/17_realistic10J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/17_realistic10J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/18_realistic10J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/18_realistic10J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/19_realistic10J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/19_realistic10J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/20_realistic10J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/20_realistic10J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/21_realistic15J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/21_realistic15J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/22_realistic15J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/22_realistic15J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/23_realistic15J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/23_realistic15J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/24_realistic15J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/24_realistic15J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/25_realistic15J10A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/25_realistic15J10A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/26_realistic10J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/26_realistic10J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/27_realistic10J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/27_realistic10J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/28_realistic10J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/28_realistic10J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/29_realistic10J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/29_realistic10J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/30_realistic10J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/30_realistic10J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/31_realistic15J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/31_realistic15J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/32_realistic15J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/32_realistic15J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/33_realistic15J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/33_realistic15J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/34_realistic15J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/34_realistic15J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSets/RealisticSets/35_realistic15J15A.dzn" beforeDir="false" afterPath="$PROJECT_DIR$/TestSets/RealisticSets/35_realistic15J15A.dzn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinizincRunner/src/MiniZincRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/src/MiniZincRunner.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -295,6 +191,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
