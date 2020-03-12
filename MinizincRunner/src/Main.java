@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 
 public class Main {
@@ -11,16 +12,23 @@ public class Main {
         File dir = new File("C:\\Users\\Maarten\\Desktop\\IDM\\gametheory_project\\TestSetGenerator\\TestSets\\RealisticSets");
         File[] directoryListing = dir.listFiles();
 //        for (int i = 0; i < directoryListing.length; i++)
-        for (int i = 0; i < 1; i++) {
+        for (int problem = 35; problem < 36; problem++) {
 
-            File file = directoryListing[i];
+            File file = directoryListing[problem];
             DataReader reader = new DataReader(file);
             int numJobs = reader.numJobs;
             int numAgents = reader.numAgents;
             int[] processingTimes = reader.processingTimes;
             //preferences = int[numAgents][numJobs];
             int[][] preferences = reader.preferences;
+            int[][] preferencesInverse = new int[numAgents][numJobs];
 
+            for (int a = 0; a < numAgents; a++) {
+                for (int j = 0; j < numJobs; j++) {
+                    preferencesInverse[a][preferences[a][j] - 1] = j + 1;
+                }
+            }
+//
             System.out.println(numJobs);
             System.out.println(numAgents);
             System.out.println(Arrays.toString(processingTimes));
@@ -29,18 +37,53 @@ public class Main {
                 System.out.println(Arrays.toString(preferences[y]));
             }
 
-            //give job 1 a score of 1 if p_1/(p_1+p_2)*numAgents >
-            int _job1 = 0;
+            //score Array
+            int[] jobScore = new int[numJobs];
 
-            for (int agent = 0; agent < numAgents; agent++) {
-                for (int job = 0; job < numJobs; job++) {
-
+            for (int jobk = 0; jobk < numJobs; jobk++) {
+                for (int jobl = 0; jobl < numJobs; jobl++) {
+                    int count = 0;
+                    if (jobk != jobl) {
+                        for (int agent = 0; agent < numAgents; agent++) {
+                            if (preferencesInverse[agent][jobk] < preferencesInverse[agent][jobl]) {
+                                count++;
+                            }
+                        }
+                        if ((float) count >= (((float) processingTimes[jobk] / ((float) processingTimes[jobk] + (float) processingTimes[jobl])) * (float) numAgents)) {
+                            jobScore[jobk]++;
+                        }
+                    }
                 }
             }
 
+            System.out.println("Jobscore: ");
+            for(int q = 0; q < jobScore.length; q++){
+                System.out.print(jobScore[q] + ", ");
+            }
 
+            // Job on position
+            int[] positionJob = new int[numJobs];
 
+            // Used Job
+            boolean[] jobUsed = new boolean[numJobs];
 
+            for (int i = 0; i < numJobs; i++) {
+                int score = -1;
+                int index = -1;
+                for (int j = 0; j < numJobs; j++) {
+                    if (score < jobScore[j] && jobUsed[j] == false) {
+                        score = jobScore[j];
+                        index = j;
+                    }
+                }
+                jobUsed[index] = true;
+                positionJob[i] = index + 1;
+            }
+
+            System.out.println("\nPositionJob: ");
+            for(int q = 0; q < positionJob.length; q++){
+                System.out.print(positionJob[q] + ", ");
+            }
         }
     }
 }
