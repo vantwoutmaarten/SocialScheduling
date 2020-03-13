@@ -21,15 +21,20 @@ public class Main {
             int[] processingTimes = reader.processingTimes;
             int[][] preferences = reader.preferences;
             Problem problem = new Problem(numJobs, numAgents, processingTimes, preferences);
-            problem.solve();
-            int tardiness = problem.getTardiness(problem.getCompletionTimeInverse(problem.algorithmOrdering));
+            problem.init();
 
-            boolean isPTACondorcetMatrix = problem.isPTACondorcetMatrix();
-            boolean isParetoOptimal = problem.isParetoOptimal();
+            System.out.println("\nCalculating criteria for minizinc output.");
+            int mztardiness = problem.calculateTardiness(MZCompletionTimes);
+            boolean mzisPTACondorcetMatrix = problem.isPTACondorcetMatrix(MZOrdering);
+            boolean mzisParetoOptimal = problem.isParetoOptimal(MZOrdering);
 
-            System.out.println(tardiness);
-            System.out.println(isPTACondorcetMatrix);
-            System.out.println(isParetoOptimal);
+            System.out.println("\nCalculating criteria for new voting rule.");
+            int[] ordering = problem.calculateVotingRuleOrdering();
+            int[] completionTimes = problem.calculateCompletionTimeInverse(ordering);
+            int tardiness = problem.calculateTardiness(completionTimes);
+            boolean isPTACondorcetMatrix = problem.isPTACondorcetMatrix(ordering);
+            boolean isParetoOptimal = problem.isParetoOptimal(ordering);
+
         }
     }
 }

@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7430942-6aaa-46a7-8c1c-3b332e6c68c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../MinizincRunner/src/Problem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinizincRunner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinizincRunner/out/production/MinizincRunner/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/out/production/MinizincRunner/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MinizincRunner/out/production/MinizincRunner/MiniZincRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/out/production/MinizincRunner/MiniZincRunner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinizincRunner/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MinizincRunner/src/MiniZincRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/src/MiniZincRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinizincRunner/src/Problem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/src/Problem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

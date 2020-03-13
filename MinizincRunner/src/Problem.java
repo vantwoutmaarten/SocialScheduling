@@ -14,7 +14,7 @@ public class Problem {
     private boolean[][] PTACondorcetMatrix;
     private boolean[][] ParetoOptimalityMatrix;
 
-    public int[] algorithmOrdering;
+    private int[] jobScore;
 
     public Problem(int numJobs, int numAgents, int[] processingTimes, int[][] preferences) {
         this.numJobs = numJobs;
@@ -41,14 +41,12 @@ public class Problem {
         }
     }
 
-    public void solve() {
-
-
+    public void init() {
         PTACondorcetMatrix = new boolean[numJobs][numJobs];
         ParetoOptimalityMatrix = new boolean[numJobs][numJobs];
 
         //score Array
-        int[] jobScore = new int[numJobs];
+        jobScore = new int[numJobs];
 
         // Calculate jobscore for PTA Copeland's Method, PTACondorcetMatrix and ParetoOptimalityMatrix
         for (int jobk = 0; jobk < numJobs; jobk++) {
@@ -75,25 +73,7 @@ public class Problem {
             }
         }
 
-        // Job on position
-        algorithmOrdering = new int[numJobs];
 
-        // Used Job
-        boolean[] jobUsed = new boolean[numJobs];
-
-        // Calculate job position from job scores from PTA Copeland's Method.
-        for (int i = 0; i < numJobs; i++) {
-            int score = -1;
-            int index = -1;
-            for (int j = 0; j < numJobs; j++) {
-                if (score < jobScore[j] && jobUsed[j] == false) {
-                    score = jobScore[j];
-                    index = j;
-                }
-            }
-            jobUsed[index] = true;
-            algorithmOrdering[i] = index + 1;
-        }
 
 //            System.out.println(numJobs);
 //            System.out.println(numAgents);
@@ -125,7 +105,30 @@ public class Problem {
 //            }
     }
 
-    public int[] getCompletionTimeInverse(int[] ordering) {
+    public int[] calculateVotingRuleOrdering() {
+        // Job on position
+        int[] algorithmOrdering = new int[numJobs];
+
+        // Used Job
+        boolean[] jobUsed = new boolean[numJobs];
+
+        // Calculate job position from job scores from PTA Copeland's Method.
+        for (int i = 0; i < numJobs; i++) {
+            int score = -1;
+            int index = -1;
+            for (int j = 0; j < numJobs; j++) {
+                if (score < jobScore[j] && jobUsed[j] == false) {
+                    score = jobScore[j];
+                    index = j;
+                }
+            }
+            jobUsed[index] = true;
+            algorithmOrdering[i] = index + 1;
+        }
+        return algorithmOrdering;
+    }
+
+    public int[] calculateCompletionTimeInverse(int[] ordering) {
         // Calculate completionTimeAlgorithm and completionTimeAlgorithmInverse
         int[] completionTimeAlgorithm = new int[numJobs];
         int[] completionTimeAlgorithmInverse = new int[numJobs];
@@ -138,39 +141,44 @@ public class Problem {
         return completionTimeAlgorithmInverse;
     }
 
-    public int getTardiness(int[] completionTimeAlgorithmInverse) {
+    public int calculateTardiness(int[] completionTimeAlgorithmInverse) {
+        // Tardiness
         int tardiness = 0;
-        System.out.println(Arrays.toString(completionTimeAlgorithmInverse));
-        System.out.println("\n");
+//        System.out.println(Arrays.toString(completionTimeAlgorithmInverse));
+//        System.out.println("\n");
         for (int a = 0; a < numAgents; a++) {
-            System.out.println(Arrays.toString(completionTimePreferencesInverse[a]));
+//            System.out.println(Arrays.toString(completionTimePreferencesInverse[a]));
             for (int j = 0; j < numJobs; j++) {
                 tardiness += Math.max(0, completionTimeAlgorithmInverse[j] - completionTimePreferencesInverse[a][j]);
             }
         }
+        System.out.println("Calculated tardiness: " + tardiness);
         return tardiness;
     }
 
-    public boolean isParetoOptimal() {
+    public boolean isParetoOptimal(int[] ordering) {
         for (int j1 = numJobs - 1; j1 > 0; j1--) {
             for (int j2 = j1 - 1; j2 >= 0; j2--) {
-                if (ParetoOptimalityMatrix[j1][j2]) {
+                if (ParetoOptimalityMatrix[ordering[j1] - 1][ordering[j2] - 1]) {
+                    System.out.println("Calculated isParetoOptimal: " + false);
                     return false;
                 }
             }
         }
+        System.out.println("Calculated isParetoOptimal: " + true);
         return true;
     }
 
-    public boolean isPTACondorcetMatrix() {
+    public boolean isPTACondorcetMatrix(int[] ordering) {
         for (int j1 = numJobs - 1; j1 > 0; j1--) {
             for (int j2 = j1 - 1; j2 >= 0; j2--) {
-                if (PTACondorcetMatrix[j1][j2]) {
+                if (PTACondorcetMatrix[ordering[j1] - 1][ordering[j2] - 1]) {
+                    System.out.println("Calculated isPTACondorcetMatrix: " + false);
                     return false;
                 }
             }
         }
+        System.out.println("Calculated isPTACondorcetMatrix: " + true);
         return true;
     }
-
 }
