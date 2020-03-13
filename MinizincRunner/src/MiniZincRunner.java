@@ -1,6 +1,4 @@
 import java.io.*;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MiniZincRunner {
@@ -18,7 +16,7 @@ public class MiniZincRunner {
         File dir = new File("C:\\Users\\Maarten\\Desktop\\IDM\\gametheory_project\\TestSetGenerator\\TestSets\\RealisticSets");
         File[] directoryListing = dir.listFiles();
         if (directoryListing != null) {
-            for (int problem = 0; problem < 1; problem++) {
+            for (int problem = 3; problem < 4; problem++) {
 
                 File file = directoryListing[problem];
                 DataReader reader = new DataReader(file);
@@ -41,13 +39,44 @@ public class MiniZincRunner {
                 miniZincRunner("minizinc", "C:\\Users\\Maarten\\Desktop\\IDM\\gametheory_project\\model.mzn", file);
                 long endTime = System.nanoTime();
                 long runtime = endTime - startTime;
-                System.out.println("!!! Runtime = " + runtime/1000000000 + " seconds!!!");
+                System.out.println("!!! Runtime = " + runtime / 1000000000 + " seconds!!!");
+
 
             }
         } else {
             System.out.println("directory is empty");
         }
     }
+
+    public boolean checkPTACondorcet(int[][] PTAmatrix) {
+        boolean isConsistent = true;
+        for (int i = 0; i < PTAmatrix.length; i++) {
+            for (int j = 0; j < PTAmatrix[i].length; j++) {
+                System.out.print(PTAmatrix[i][j] + " ");
+            }
+            System.out.println(" ");
+        }
+
+        for (int i = 0; i < PTAmatrix.length; i++) {
+            for (int j = 0; j < PTAmatrix[i].length; j++) {
+                if (PTAmatrix[i][j] == 1) {
+                    jobPair:
+                    for (int job = 0; job < numJobs; job++) {
+                        if (jobPosition[job]-1 == i) {
+                            break jobPair;
+                        } else if (jobPosition[job]-1 == j) {
+                            System.out.println("Jobposition[i] at i: " + job + "makes it wrong & job i: " + (i+1) + " and job j: " + (j+1) + " are not consistent");
+                            return false;
+                        } else {
+                        }
+                    }
+                }
+            }
+        }
+        System.out.println("jobs are consistent");
+        return true;
+    }
+
 
     public void miniZincRunner(String commd, String model, File dataset) throws IOException {
         Process process = new ProcessBuilder(commd, model, dataset + "").start();
