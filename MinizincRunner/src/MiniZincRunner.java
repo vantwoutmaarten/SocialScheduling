@@ -1,4 +1,6 @@
 import java.io.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MiniZincRunner {
@@ -15,20 +17,19 @@ public class MiniZincRunner {
 
     public void runMinizinc(File file) throws IOException {
 
-                DataReader reader = new DataReader(file);
-                numJobs = reader.numJobs;
-                numAgents = reader.numAgents;
-                processingTimes = reader.processingTimes;
-                //preferences = int[numAgents][numJobs];
-                preferences = reader.preferences;
+        DataReader reader = new DataReader(file);
+        numJobs = reader.numJobs;
+        numAgents = reader.numAgents;
+        processingTimes = reader.processingTimes;
+        //preferences = int[numAgents][numJobs];
+        preferences = reader.preferences;
 
-                // Do something with child
-                long startTime = System.nanoTime();
-                miniZincRunner("minizinc", "C:\\Users\\Maarten\\Desktop\\IDM\\gametheory_project\\model.mzn", file);
-                long endTime = System.nanoTime();
-                runtime = (double) (endTime - startTime)/ 1000000000;
-                System.out.println("!!! Runtime = " + runtime / 1000000000 + " seconds!!!");
-            }
+        // Do something with child
+        long startTime = System.nanoTime();
+        long endTime = System.nanoTime();
+        runtime = (double) (endTime - startTime)/ 1000000000;
+        System.out.println("!!! Runtime = " + runtime / 1000000000 + " seconds!!!");
+    }
 
     public void miniZincRunner(String commd, String model, File dataset) throws IOException {
         Process process = new ProcessBuilder(commd, model, dataset + "").start();

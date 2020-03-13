@@ -11,28 +11,19 @@ public class Main {
         int numAgents;
         ArrayList isprefered;
         //Realistic test sets
-        for (int i = 1; i <= 35; i++) {
-            if (i <= 5) {
+        for (int i = 1; i <= 40; i++) {
+            if (i <= 10) {
                 numJobs = 5;
                 numAgents = 5;
-            }else if(i<= 10){
+            }else if(i<= 20){
                 numJobs = 5;
-                numAgents = 10;
-            }else if(i <= 15){
-                numJobs = 10;
-                numAgents = 5;
-            }else if(i <= 20){
-                numJobs = 10;
-                numAgents = 10;
-            }else if(i <= 25){
-                numJobs = 15;
                 numAgents = 10;
             }else if(i <= 30){
                 numJobs = 10;
-                numAgents = 15;
-            }else{
-                numJobs = 15;
-                numAgents = 15;
+                numAgents = 5;
+            }else {
+                numJobs = 10;
+                numAgents = 10;
             }
             String doubledigit_i = (i < 10 ? "0" : "") + i;
             try (FileWriter fileWriter = new FileWriter("TestSets/RealisticSets/"+ doubledigit_i+ "_realistic" + numJobs + "J" + numAgents + "A.dzn" )) {
@@ -78,28 +69,19 @@ public class Main {
             }
         }
        //High Similarity Sets
-        for (int i = 1; i <= 35; i++) {
-            if (i <= 5) {
+        for (int i = 1; i <= 40; i++) {
+            if (i <= 10) {
                 numJobs = 5;
                 numAgents = 5;
-            }else if(i<= 10){
+            }else if(i<= 20){
                 numJobs = 5;
-                numAgents = 10;
-            }else if(i <= 15){
-                numJobs = 10;
-                numAgents = 5;
-            }else if(i <= 20){
-                numJobs = 10;
-                numAgents = 10;
-            }else if(i <= 25){
-                numJobs = 15;
                 numAgents = 10;
             }else if(i <= 30){
                 numJobs = 10;
-                numAgents = 15;
-            }else{
-                numJobs = 15;
-                numAgents = 15;
+                numAgents = 5;
+            }else {
+                numJobs = 10;
+                numAgents = 10;
             }
             String doubledigit_i = (i < 10 ? "0" : "") + i;
             try (FileWriter fileWriter = new FileWriter("TestSets/HighSimilarityPref_Sets/"+ doubledigit_i + "_highsim" + numJobs + "J" + numAgents + "A.dzn" )) {
@@ -147,28 +129,19 @@ public class Main {
         }
 
         //Low Similarity Sets
-        for (int i = 1; i <= 35; i++) {
-            if (i <= 5) {
+        for (int i = 1; i <= 40; i++) {
+            if (i <= 10) {
                 numJobs = 5;
                 numAgents = 5;
-            }else if(i<= 10){
+            }else if(i<= 20){
                 numJobs = 5;
-                numAgents = 10;
-            }else if(i <= 15){
-                numJobs = 10;
-                numAgents = 5;
-            }else if(i <= 20){
-                numJobs = 10;
-                numAgents = 10;
-            }else if(i <= 25){
-                numJobs = 15;
                 numAgents = 10;
             }else if(i <= 30){
                 numJobs = 10;
-                numAgents = 15;
-            }else{
-                numJobs = 15;
-                numAgents = 15;
+                numAgents = 5;
+            }else {
+                numJobs = 10;
+                numAgents = 10;
             }
             String doubledigit_i = (i < 10 ? "0" : "") + i;
             try (FileWriter fileWriter = new FileWriter("TestSets/LowSimilarityPref_Sets/"+ doubledigit_i + "_lowsim" + numJobs + "J" + numAgents + "A.dzn" )) {

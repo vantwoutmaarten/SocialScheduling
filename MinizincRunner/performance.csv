@@ -1,2 +1,0 @@
-filename,numAgents,numJobs,MZtardiness,MZisPTACondorcet,MZisParetoOptimal,MZRuntime,CLtardiness,CPisPTACondorcet,isParetoOptimal
-01_realistic5J5A.dzn,5,5,589,false,true,1.887703331,647,true,true,7.551E-6
