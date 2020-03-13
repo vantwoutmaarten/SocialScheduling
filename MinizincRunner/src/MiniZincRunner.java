@@ -11,14 +11,10 @@ public class MiniZincRunner {
     int[] jobPosition;
     int[][] agentcompletionTimes;
     int[] completionTimes;
+    double runtime;
 
-    public void looper() throws IOException {
-        File dir = new File("C:\\Users\\Maarten\\Desktop\\IDM\\gametheory_project\\TestSetGenerator\\TestSets\\RealisticSets");
-        File[] directoryListing = dir.listFiles();
-        if (directoryListing != null) {
-            for (int problem = 3; problem < 4; problem++) {
+    public void runMinizinc(File file) throws IOException {
 
-                File file = directoryListing[problem];
                 DataReader reader = new DataReader(file);
                 numJobs = reader.numJobs;
                 numAgents = reader.numAgents;
@@ -26,57 +22,13 @@ public class MiniZincRunner {
                 //preferences = int[numAgents][numJobs];
                 preferences = reader.preferences;
 
-//                System.out.println(numJobs);
-//                System.out.println(numAgents);
-//                System.out.println(Arrays.toString(processingTimes));
-//                System.out.println(Arrays.toString(preferences[0]));
-//                for (int y = 1; y < numAgents; y++) {
-//                    System.out.println(Arrays.toString(preferences[y]));
-//                }
-
                 // Do something with child
                 long startTime = System.nanoTime();
                 miniZincRunner("minizinc", "C:\\Users\\Maarten\\Desktop\\IDM\\gametheory_project\\model.mzn", file);
                 long endTime = System.nanoTime();
-                long runtime = endTime - startTime;
+                runtime = (double) (endTime - startTime)/ 1000000000;
                 System.out.println("!!! Runtime = " + runtime / 1000000000 + " seconds!!!");
-
-
             }
-        } else {
-            System.out.println("directory is empty");
-        }
-    }
-
-    public boolean checkPTACondorcet(int[][] PTAmatrix) {
-        boolean isConsistent = true;
-        for (int i = 0; i < PTAmatrix.length; i++) {
-            for (int j = 0; j < PTAmatrix[i].length; j++) {
-                System.out.print(PTAmatrix[i][j] + " ");
-            }
-            System.out.println(" ");
-        }
-
-        for (int i = 0; i < PTAmatrix.length; i++) {
-            for (int j = 0; j < PTAmatrix[i].length; j++) {
-                if (PTAmatrix[i][j] == 1) {
-                    jobPair:
-                    for (int job = 0; job < numJobs; job++) {
-                        if (jobPosition[job]-1 == i) {
-                            break jobPair;
-                        } else if (jobPosition[job]-1 == j) {
-                            System.out.println("Jobposition[i] at i: " + job + "makes it wrong & job i: " + (i+1) + " and job j: " + (j+1) + " are not consistent");
-                            return false;
-                        } else {
-                        }
-                    }
-                }
-            }
-        }
-        System.out.println("jobs are consistent");
-        return true;
-    }
-
 
     public void miniZincRunner(String commd, String model, File dataset) throws IOException {
         Process process = new ProcessBuilder(commd, model, dataset + "").start();
@@ -100,5 +52,17 @@ public class MiniZincRunner {
         System.out.println(Arrays.toString(jobPosition));
         System.out.println(Arrays.toString(completionTimes));
         return;
+    }
+
+    public int[] getOrdering() {
+        return jobPosition;
+    }
+
+    public int[] getCompletionTimes() {
+        return completionTimes;
+    }
+
+    public double getRuntime() {
+        return runtime;
     }
 }

@@ -11,7 +11,7 @@ public class Main {
         int numAgents;
         ArrayList isprefered;
         //Realistic test sets
-        for (int i = 1; i <= 36; i++) {
+        for (int i = 1; i <= 35; i++) {
             if (i <= 5) {
                 numJobs = 5;
                 numAgents = 5;
@@ -30,12 +30,9 @@ public class Main {
             }else if(i <= 30){
                 numJobs = 10;
                 numAgents = 15;
-            }else if (i <= 35){
+            }else{
                 numJobs = 15;
                 numAgents = 15;
-            }else{
-                numJobs = 100;
-                numAgents = 100;
             }
             String doubledigit_i = (i < 10 ? "0" : "") + i;
             try (FileWriter fileWriter = new FileWriter("TestSets/RealisticSets/"+ doubledigit_i+ "_realistic" + numJobs + "J" + numAgents + "A.dzn" )) {
@@ -81,7 +78,7 @@ public class Main {
             }
         }
        //High Similarity Sets
-        for (int i = 1; i <= 36; i++) {
+        for (int i = 1; i <= 35; i++) {
             if (i <= 5) {
                 numJobs = 5;
                 numAgents = 5;
@@ -100,12 +97,9 @@ public class Main {
             }else if(i <= 30){
                 numJobs = 10;
                 numAgents = 15;
-            }else if (i <= 35){
+            }else{
                 numJobs = 15;
                 numAgents = 15;
-            }else{
-                numJobs = 100;
-                numAgents = 100;
             }
             String doubledigit_i = (i < 10 ? "0" : "") + i;
             try (FileWriter fileWriter = new FileWriter("TestSets/HighSimilarityPref_Sets/"+ doubledigit_i + "_highsim" + numJobs + "J" + numAgents + "A.dzn" )) {
