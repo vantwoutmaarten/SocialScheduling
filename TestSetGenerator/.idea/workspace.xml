@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/../MinizincRunner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinizincRunner/out/production/MinizincRunner/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/out/production/MinizincRunner/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinizincRunner/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinizincRunner/src/MiniZincRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/src/MiniZincRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinizincRunner/src/Problem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MinizincRunner/src/Problem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -113,7 +114,7 @@
       <workItem from="1583941278700" duration="13000" />
       <workItem from="1584005986732" duration="681000" />
       <workItem from="1584007343685" duration="721000" />
-      <workItem from="1584011563180" duration="2111000" />
+      <workItem from="1584011563180" duration="3190000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,7 @@
+import sun.plugin.javascript.navig.Array;
+
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Problem {
@@ -15,6 +18,7 @@ public class Problem {
     private boolean[][] ParetoOptimalityMatrix;
 
     private int[] jobScore;
+    private double runtime;
 
     public Problem(int numJobs, int numAgents, int[] processingTimes, int[][] preferences) {
         this.numJobs = numJobs;
@@ -22,6 +26,7 @@ public class Problem {
         this.processingTimes = processingTimes;
         this.preferences = preferences;
 
+        // Inverses are calculated as: if job 10 is preferred on position 3, then preferences[2] = 10 and preferencesInverse[9] = 3
         preferencesInverse = new int[numAgents][numJobs];
         completionTimePreferences = new int[numAgents][numJobs];
         completionTimePreferencesInverse = new int[numAgents][numJobs];
@@ -50,7 +55,6 @@ public class Problem {
 
         // Calculate jobscore for PTA Copeland's Method, PTACondorcetMatrix and ParetoOptimalityMatrix
         for (int jobk = 0; jobk < numJobs; jobk++) {
-            toNextJobl:
             for (int jobl = 0; jobl < numJobs; jobl++) {
                 int count = 0;
                 if (jobk != jobl) {
@@ -59,50 +63,20 @@ public class Problem {
                             count++;
                         }
                     }
-                    if ((float) count >= (((float) processingTimes[jobk] / ((float) processingTimes[jobk] + (float) processingTimes[jobl])) * (float) numAgents)) {
+                    if ((float) count >= ((float) processingTimes[jobk] / ((float) processingTimes[jobk] + (float) processingTimes[jobl]) * (float) numAgents)) {
                         jobScore[jobk]++;
                         PTACondorcetMatrix[jobk][jobl] = true;
                     }
+                    ParetoOptimalityMatrix[jobk][jobl] = true;
                     for (int agent = 0; agent < numAgents; agent++) {
-                        if (preferencesInverse[agent][jobk] < preferencesInverse[agent][jobl]) {
-                            break toNextJobl;
+                        if (preferencesInverse[agent][jobk] > preferencesInverse[agent][jobl]) {
+                            ParetoOptimalityMatrix[jobk][jobl] = false;
+                            break;
                         }
                     }
-                    ParetoOptimalityMatrix[jobk][jobl] = true;
                 }
             }
         }
-
-
-
-//            System.out.println(numJobs);
-//            System.out.println(numAgents);
-//            System.out.println(Arrays.toString(processingTimes));
-//            for (int y = 0; y < numAgents; y++) {
-//                System.out.println(Arrays.toString(preferences[y]));
-//            }
-//            System.out.println("\n");
-//            for (int y = 0; y < numAgents; y++) {
-//                System.out.println(Arrays.toString(preferencesInverse[y]));
-//            }
-//            System.out.println("\n");
-//            for (int y = 0; y < numAgents; y++) {
-//                System.out.println(Arrays.toString(completionTimePreferences[y]));
-//            }
-//            System.out.println("\n");
-//            for (int y = 0; y < numAgents; y++) {
-//                System.out.println(Arrays.toString(completionTimePreferencesInverse[y]));
-//            }
-
-//            System.out.println("Jobscore: ");
-//            for(int q = 0; q < jobScore.length; q++){
-//                System.out.print(jobScore[q] + ", ");
-//            }
-
-//            System.out.println("\njobPosition: ");
-//            for(int q = 0; q < jobPosition.length; q++){
-//                System.out.print(jobPosition[q] + ", ");
-//            }
     }
 
     public int[] calculateVotingRuleOrdering() {
@@ -125,6 +99,7 @@ public class Problem {
             jobUsed[index] = true;
             algorithmOrdering[i] = index + 1;
         }
+        System.out.println("algorithmOrdering:" + Arrays.toString(algorithmOrdering));
         return algorithmOrdering;
     }
 
@@ -141,19 +116,16 @@ public class Problem {
         return completionTimeAlgorithmInverse;
     }
 
-    public int calculateTardiness(int[] completionTimeAlgorithmInverse) {
+    public int[] calculateTardiness(int[] completionTimeAlgorithmInverse) {
         // Tardiness
-        int tardiness = 0;
-//        System.out.println(Arrays.toString(completionTimeAlgorithmInverse));
-//        System.out.println("\n");
+        int[] tardinessPerAgent = new int[numAgents];
         for (int a = 0; a < numAgents; a++) {
-//            System.out.println(Arrays.toString(completionTimePreferencesInverse[a]));
             for (int j = 0; j < numJobs; j++) {
-                tardiness += Math.max(0, completionTimeAlgorithmInverse[j] - completionTimePreferencesInverse[a][j]);
+                tardinessPerAgent[a] += Math.max(0, completionTimeAlgorithmInverse[j] - completionTimePreferencesInverse[a][j]);
             }
         }
-        System.out.println("Calculated tardiness: " + tardiness);
-        return tardiness;
+        System.out.println("Calculated Total Tardiness: " + Arrays.stream(tardinessPerAgent).sum());
+        return tardinessPerAgent;
     }
 
     public boolean isParetoOptimal(int[] ordering) {
@@ -180,5 +152,46 @@ public class Problem {
         }
         System.out.println("Calculated isPTACondorcetMatrix: " + true);
         return true;
+    }
+
+    public float calculateGiniCoefficient(int[] tardinessPerAgent) {
+        Arrays.sort(tardinessPerAgent);
+        ArrayList<Integer> amount = new ArrayList<>();
+        ArrayList<Integer> counter = new ArrayList<>();
+        ArrayList<Float> prob = new ArrayList<>();
+        amount.add(tardinessPerAgent[0]);
+        counter.add(1);
+        for (int i = 1; i < numAgents; i++) {
+            if (tardinessPerAgent[i] == amount.get(amount.size() - 1)) {
+                int next = counter.remove(counter.size() - 1);
+                counter.add(++next);
+            } else {
+                prob.add(((float)counter.get(counter.size() - 1) / (float)numAgents));
+                amount.add(tardinessPerAgent[i]);
+                counter.add(1);
+            }
+        }
+        prob.add(((float)counter.get(counter.size() - 1) / (float)numAgents));
+
+        int[] sWages = new int[prob.size()];
+        for (int i = 0; i < prob.size(); i++) {
+            for (int j = 0; j <= i; j++) {
+                sWages[i] += prob.get(j) * amount.get(j);
+            }
+        }
+
+        float gWages = sWages[0] * prob.get(0);
+        for (int i = 1; i < sWages.length; i++) {
+            gWages += prob.get(i) * (sWages[i] + sWages[i - 1]);
+        }
+        float giniCoefficient = 1 - (gWages / sWages[sWages.length - 1]);
+
+        System.out.println("Calculated Gini Coefficient: " + giniCoefficient);
+
+        return giniCoefficient;
+    }
+
+    public double getRuntime() {
+        return runtime;
     }
 }

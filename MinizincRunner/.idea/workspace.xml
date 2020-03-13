@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MinizincRunner/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MinizincRunner/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MiniZincRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MiniZincRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Problem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Problem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TestSetGenerator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TestSetGenerator/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -37,6 +38,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TestSetGenerator" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -115,7 +117,7 @@
       <workItem from="1584007312823" duration="747000" />
       <workItem from="1584008096308" duration="1075000" />
       <workItem from="1584009385079" duration="444000" />
-      <workItem from="1584009978446" duration="17072000" />
+      <workItem from="1584009978446" duration="32304000" />
     </task>
     <servers />
   </component>
