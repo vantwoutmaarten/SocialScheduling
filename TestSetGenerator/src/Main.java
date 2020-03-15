@@ -33,10 +33,10 @@ public class Main {
                 int procTime;
                 for(int j = 0; j < numJobs; j++){
                     //(Math.random() * ((max - min) + 1)) + min
-                    procTime = (int)((Math.random() * ((60 - 35))) + 35);
-                    if(j != numJobs-1) {
+
                         fileWriter.write(procTime + ", ");
-                    }else{
+                    }else{procTime = (int)((Math.random() * ((60 - 35))) + 35);
+                        if(j != numJobs-1) {
                         fileWriter.write(procTime + "");
                     }
                 }

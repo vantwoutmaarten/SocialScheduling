@@ -1,0 +1,5 @@
+filename,numAgents,numJobs,MZtardiness,MZisPTACondorcet,MZisParetoOptimal,MZgini,MZRuntime,CLtardiness,CPisPTACondorcet,isParetoOptimal,gini,runtime
+01_similarpref5J5A.dzn,5,5,186,true,true,0.25555557,4.635905392,186,true,true,0.25555557,0.0
+02_similarpref5J10A.dzn,10,5,372,true,true,0.25555557,2.581818642,372,true,true,0.25555557,0.0
+03_similarpref10J5A.dzn,5,10,279,true,true,0.35555547,3.114440187,279,true,true,0.35555547,0.0
+04_similarpref10J10A.dzn,10,10,558,true,true,0.35555547,3.429571043,558,true,true,0.35555547,0.0

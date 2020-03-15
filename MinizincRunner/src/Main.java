@@ -7,11 +7,11 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        String csvFile = "realisticPerformance.csv";
+        String csvFile = "similarprefsperformance.csv";
         FileWriter writer = new FileWriter(csvFile);
         CSVUtils.writeLine(writer, Arrays.asList("filename", "numAgents", "numJobs", "MZtardiness", "MZisPTACondorcet", "MZisParetoOptimal", "MZgini", "MZRuntime", "CLtardiness", "CPisPTACondorcet", "isParetoOptimal", "gini", "runtime"));
 
-        File dir = new File("C:\\Users\\Maarten\\Desktop\\IDM\\gametheory_project\\TestSetGenerator\\TestSets\\RealisticSets");
+        File dir = new File("C:\\Users\\Maarten\\Desktop\\IDM\\gametheory_project\\TestSetGenerator\\TestSets\\similarPrefs");
         File[] directoryListing = dir.listFiles();
         for (int p = 0; p < directoryListing.length; p++) {
             File file = directoryListing[p];

@@ -26,18 +26,17 @@ public class MiniZincRunner {
 
         // Do something with child
         long startTime = System.nanoTime();
+                miniZincRunner("minizinc", "C:\\Users\\Maarten\\Desktop\\IDM\\gametheory_project\\model.mzn", file);
         long endTime = System.nanoTime();
         runtime = (double) (endTime - startTime)/ 1000000000;
         System.out.println("!!! Runtime = " + runtime / 1000000000 + " seconds!!!");
     }
-
     public void miniZincRunner(String commd, String model, File dataset) throws IOException {
         Process process = new ProcessBuilder(commd, model, dataset + "").start();
         InputStream is = process.getInputStream();
         InputStreamReader isr = new InputStreamReader(is);
         BufferedReader br = new BufferedReader(isr);
         String line;
-
         String line1 = br.readLine();
         String[] schedulestring = line1.substring(line1.indexOf("[") + 1, line1.indexOf("]")).split(", ");
         this.jobPosition = new int[numJobs];
@@ -54,15 +53,12 @@ public class MiniZincRunner {
         System.out.println(Arrays.toString(completionTimes));
         return;
     }
-
     public int[] getOrdering() {
         return jobPosition;
     }
-
     public int[] getCompletionTimes() {
         return completionTimes;
     }
-
     public double getRuntime() {
         return runtime;
     }
