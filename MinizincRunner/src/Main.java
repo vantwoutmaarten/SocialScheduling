@@ -12,9 +12,12 @@ public class Main {
         FileWriter writer = new FileWriter(csvFile);
         CSVUtils.writeLine(writer, Arrays.asList("filename", "numAgents", "numJobs", "MZtardiness", "MZisPTACondorcet", "MZisParetoOptimal", "MZgini", "MZRuntime", "CLtardiness", "CPisPTACondorcet", "isParetoOptimal", "gini", "runtime"));
 
-        File dir = new File("/Users/berendjanlange/GitDrive/TU Delft/Algorithms for Intelligent Decision Making/SocialScheduling/TestSetGenerator/TestSets/RealisticSets");
+//        File dir = new File("/Users/berendjanlange/GitDrive/TU Delft/Algorithms for Intelligent Decision Making/SocialScheduling/TestSetGenerator/TestSets/HighSimilarityPref_Sets");
+        File dir = new File("/Users/berendjanlange/GitDrive/TU Delft/Algorithms for Intelligent Decision Making/SocialScheduling/TestSetGenerator/TestSets/LowSimilarityPref_Sets");
+//        File dir = new File("/Users/berendjanlange/GitDrive/TU Delft/Algorithms for Intelligent Decision Making/SocialScheduling/TestSetGenerator/TestSets/RealisticSets");
+//        File dir = new File("/Users/berendjanlange/GitDrive/TU Delft/Algorithms for Intelligent Decision Making/SocialScheduling/TestSetGenerator/TestSets/examples");
         File[] directoryListing = dir.listFiles();
-        for (int p = 0; p < directoryListing.length && p < 1; p++) {
+        for (int p = 34; p < directoryListing.length && p < 35; p++) {
             File file = directoryListing[p];
             String filename = file.getName();
             MiniZincRunner runMZ = new MiniZincRunner();

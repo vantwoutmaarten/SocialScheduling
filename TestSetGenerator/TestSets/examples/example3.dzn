@@ -1,0 +1,6 @@
+numJobs = 3;
+numAgents = 3;
+processingTimes = [3, 3, 3];
+preferences = [|1, 3, 2|
+3, 2, 1|
+2, 1, 3|];
