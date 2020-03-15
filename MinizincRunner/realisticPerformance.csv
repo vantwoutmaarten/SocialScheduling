@@ -1,0 +1,2 @@
+filename,numAgents,numJobs,MZtardiness,MZisPTACondorcet,MZisParetoOptimal,MZgini,MZRuntime,CLtardiness,CPisPTACondorcet,isParetoOptimal,gini,runtime
+30_lowsim10J5A.dzn,5,10,2198,false,true,0.13180774,22.833098232,2311,false,true,0.1321739,0.0

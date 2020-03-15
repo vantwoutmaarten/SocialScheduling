@@ -32,9 +32,10 @@ public class Main {
             int[] processingTimes = reader.processingTimes;
             int[][] preferences = reader.preferences;
             Problem problem = new Problem(numJobs, numAgents, processingTimes, preferences);
-            problem.init();
+            problem.getJobScore();
 
             System.out.println("\nCalculating criteria for minizinc output.");
+            System.out.println("minizincOrdering:" + Arrays.toString(MZOrdering));
             int[] MZtardinessPerAgent = problem.calculateTardiness(MZCompletionTimes);
             int MZsumTardiness = Arrays.stream(MZtardinessPerAgent).sum();
             boolean MZisPTACondorcetMatrix = problem.isPTACondorcetMatrix(MZOrdering);

@@ -64,7 +64,7 @@ public class Problem {
     /**
      * Calculates jobScore, PTACondorcetMatrix and ParetoOptimalityMatrix.
      */
-    public void init() {
+    public void getJobScore() {
         PTACondorcetMatrix = new boolean[numJobs][numJobs];
         ParetoOptimalityMatrix = new boolean[numJobs][numJobs];
 

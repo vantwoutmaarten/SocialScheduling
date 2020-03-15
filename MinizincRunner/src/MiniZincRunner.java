@@ -1,17 +1,11 @@
 import java.io.*;
-        import java.lang.reflect.Array;
-        import java.util.ArrayList;
-        import java.util.Arrays;
 
 public class MiniZincRunner {
     int numJobs;
     int numAgents;
     int[] processingTimes;
-    //preferences = int[numAgents][numJobs];
     int[][] preferences;
-    //on jobposition[0] it is specified which job comes first
     int[] jobPosition;
-    int[][] agentcompletionTimes;
     int[] completionTimes;
     double runtime;
 
@@ -21,15 +15,12 @@ public class MiniZincRunner {
         numJobs = reader.numJobs;
         numAgents = reader.numAgents;
         processingTimes = reader.processingTimes;
-        //preferences = int[numAgents][numJobs];
         preferences = reader.preferences;
 
-        // Do something with child
         long startTime = System.nanoTime();
         miniZincRunner("minizinc", "/Users/berendjanlange/GitDrive/TU Delft/Algorithms for Intelligent Decision Making/SocialScheduling/model.mzn", file);
         long endTime = System.nanoTime();
-        runtime = (double) (endTime - startTime)/ 1000000000;
-        System.out.println("!!! Runtime = " + runtime / 1000000000 + " seconds!!!");
+        runtime = (double) (endTime - startTime) / 1000000000;
     }
 
     public void miniZincRunner(String commd, String model, File dataset) throws IOException {
@@ -51,8 +42,6 @@ public class MiniZincRunner {
         for (int x = 0; x < numJobs; x++) {
             this.completionTimes[x] = Integer.parseInt(completionstring[x]);
         }
-        System.out.println(Arrays.toString(jobPosition));
-        System.out.println(Arrays.toString(completionTimes));
         return;
     }
 
